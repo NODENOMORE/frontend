@@ -27,6 +27,7 @@
 * [OPTIONAL] use Handlebars
 * Create 2nd repo for frontend (use github pages for deployment)
 * Repos must use automated deployments (github triggers) 
+
 ## Presentation Requirements
 Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
 * Elevator pitch: a one minute description of your application
@@ -35,6 +36,7 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 * Demo: Show your stuff!
 * Directions for Future Development
 * Links to to the deployed application and the GitHub repository
+
 ## Grading Metrics 
 | Metric        | Weight | 
 | ---           | ---    |
@@ -43,6 +45,7 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 | Functionality | 30%    |
 | Collaboration | 30%    |
 | Presentation  | 10%    |
+
 ## Submission on BCS
 You are required to submit the following:
 * The URL of the deployed application

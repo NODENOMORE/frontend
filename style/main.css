@@ -367,67 +367,158 @@ textarea {
 /* =========================================================== */
 
 
-/* ========== DOM ==========*/
+body, html {
+  height: 100vh;
+}
+
 
 body {
-  color: white;
-  background: #f2f2f2;
-  /* display: grid; */
+  margin: 0;
+  display: grid;
+  grid-template-columns: 15% 23% 23% 23% auto;
+  grid-template-rows: 10% 7% 25% 25% 25% auto;
+  grid-gap: .5vw;
+  grid-template-areas:    
+    "header header header header header"
+    "subheader subheader subheader subheader subheader"
+    "sidea sect1 sect2 sect3 beside"
+    "sidea sect4 sect5 sect6 beside"
+    "sidea sect7 sect8 sect9 beside"
+    "footer footer footer footer footer";  
+}
+ 
+/* ========== START GRID ==========*/
+
+header {
+  grid-area: header;
+  background-color: #ffffff;
 }
 
+#subheader {
+  position: relative;
+  grid-area: subheader;
+  background-color: #f2f2f2;
+}
+
+#sidea {
+  grid-area: sidea;
+  background-color: #b6f2ff;
+}
+
+#beside {
+  grid-area: beside;
+  background-color: #ffffff;
+  
+}
+
+#first {
+  grid-area: sect1;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: red;
+}
+
+#second {
+  grid-area: sect2;
+  background-color: #ffffff;
+}
+
+#third {
+  grid-area: sect3;
+  background-color: #ffffff;
+}
+
+#fourth {
+  grid-area: sect4;
+  background-color: #ffffff;
+}
+
+#fifth {
+  grid-area: sect5;
+  background-color: #ffffff;
+}
+
+#sixth {
+  grid-area: sect6;
+  background-color: #ffffff;
+}
+
+#seventh {
+  grid-area: sect7;
+  background-color: #ffffff;
+}
+
+#eigth {
+  grid-area: sect8;
+  background-color: #ffffff;
+}
+
+#ninth {
+  grid-area: sect9;
+  background-color: #ffffff;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f2f2f2;
+}
+
+/* ========== END GRID ==========*/
 
 /* ========== NAVBAR ==========*/
-
-.navbar {
-  position: relative;
-  background-color: white;
-  font-family:'Yellowtail', cursive;
-  font-size: 8vh;
-  color: #00c3ea;
-  height: 12vh; 
-}
 
 .logo {
   position: absolute;
   left: 2vh;
-  top: 2vh;
+  top: 1vh;
+  background-color: white;
+  font-family:'Yellowtail', cursive;
+  font-size: 8vh;
+  color: #00c3ea;
+
 }
 
 /* ========== END NAVBAR ==========*/
+
 
 /* ========== SEARCH BAR ==========*/
 
 .searchbar {
   display: grid;
-  position: relative;
-  grid-template-columns: 1fr;
-  margin-top: 10vh;
-  margin-left: 27vw;
+  /* place-items: center center; */
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 3vh;
+  height: auto;
+  margin-left: 25vw;
   margin-right: 25vw;
-  position: relative;
-  justify-items: end;
+  margin-top: 2vh;
+
 }
 
 .searchbar input {
+  display: grid;
+  position: relative;
+  place-items: center center;
   border-style: none;
-  width: 100%;
-  margin: none;
-  padding: .75vw;
   border-radius: 15px 15px 15px 15px;
+  width: 110%;
+  z-index: 0;
 }
 
 
 .search-button {
-  position: absolute;
+  display: grid;
+  position: relative;
+  place-items: center center;
   font-family: calibri;
   background-color: #00c3ea;
   color: white;
-  border: none;
+  border-style: none;
   border-radius: 15px 15px 15px 15px;
-  padding: .75vw;
-  min-width: 6vw;
-  margin: none;
+  min-width: 50px;
+  z-index: 1;
 }
+
 
 .search-button:hover {
   background-color: #cf9ee2;
@@ -438,43 +529,7 @@ body {
   transform: translateX(1px);
 }
 
-/* @media all and (max-width: 600px) {
-
-  .searchbar {
-    margin-right: 25%;
-    margin-left: 25%;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 10vh;
-    margin-left: 2%;
-    margin-right: 25%;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .search {
-    position: absolute;
-    font-family: calibri;
-    font-weight: bold;
-    font-size: auto;
-    background-color: #00c3ea;
-    color: white;
-    width: 10vw;
-    margin: none;
-    padding: 1vw;
-    border: none;
-    border-radius: 0px 90px 90px 90px;
-    right: 0vw;
-    top: 0vw;
-  }
-
-} */
-
 /* ========== END SEARCHBAR ==========*/
-
-
-
 
 /* ========== START CARD ==========*/
 
@@ -484,8 +539,11 @@ body {
   grid-template-columns: auto auto auto;
   justify-content: space-evenly; 
   justify-items: center;
-  margin-top: 8vh;
-  height: 24vh;
+  margin-top: 0;
+  margin-bottom: 4%;
+  margin-left: 1%;
+  height: 100%;
+
 }
 
 .card {
@@ -503,7 +561,7 @@ body {
   line-height: 1.6;
   font-weight: bold;
   border-radius: 15px 15px 15px 15px;
-  min-width: 40vw;
+  min-width: 22vw;
 }
 
 
@@ -517,7 +575,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px 15px 15px 15px;
-  background: white;
+  background: #f2f2f2;
   color: #00c3ea;
   font-size: 1.2vw;
 }
@@ -637,68 +695,4 @@ body {
 }
 
 /* ========== END CARD ==========*/
-
-
-
-/* ========== NAVBAR ==========*/
-
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 50px;
-  justify-content: space-evenly; 
-  justify-items: center;
-  margin-top: 6vh;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  /* grid-auto-rows: 100px; */
-}
-
-.capsule {
-  width: 12vw;
-  height: 14vh;
-  position: relative;
-  /* background-color: purple; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 50%;
-  grid-gap: 100px;
-}
-
-.capsule:hover {
-  opacity: 100%;
-  transition: opacity 500ms ease-out;
-}
-
-.nav{
-  position: absolute;
-  font-family: calibri;
-  font-weight: bold;
-  color: #a6a6a6;
-  font-size: 2vh;
-  border: none;
-  top: 2vh;
-}
-
-.dot {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 10vh;
-  background-color: white;
-}
-
-/* ========== END NAVBAR ==========*/
-
-
-
-
-
-
-
-
 
