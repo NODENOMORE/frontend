@@ -1,0 +1,109 @@
+:root {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    --color-first: #00c3ea;
+    --color-second: #ffffff;
+    --color-third: #cf9ee2;
+}
+
+/* Form Container */
+.customCard {
+    padding: 1.0rem;
+    margin: 1.0rem;
+    width: 73rem;
+    background-color: var(--color-first);
+    border-radius: .4rem;
+}
+
+/* Form Titles */
+label {
+    font-family: 'Yellowtail', cursive;
+    font-size: 2.2rem;
+    color: var(--color-second);
+}
+
+::placeholder {
+    color: var(--color-first);
+    opacity: 1;
+    /* Firefox */
+    transition: opacity 0.3s linear;
+}
+
+:focus::placeholder {
+    opacity: 0;
+}
+
+/* Form Word Box */
+form input[type="word"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    background: var(--color-second);
+    color: var(--color-first);
+    border: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: calibri;
+    border-radius: .4rem;
+}
+
+/* Form Definition Box */
+form textarea[type="definition"] {
+    display: block;
+    resize: none;
+    width: 100%;
+    height: 30rem;
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    background: var(--color-second);
+    color: var(--color-first);
+    border: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: calibri;
+    border-radius: .4rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-third);
+}
+
+/* Form Confirm Button */
+form input[type="submit"] {
+    margin-top: 1rem;
+    width: 100%;
+    background: #f1f1f1;
+    color: var(--color-first);
+    border: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: .4rem;
+    transition: 0.3s;
+}
+
+#custom_button:hover {
+    background-color: var(--color-third);
+    color: var(--color-second);
+}
+
+.custom-close {
+    float: right;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.custom-close:hover {
+    color: var(--color-third);
+}

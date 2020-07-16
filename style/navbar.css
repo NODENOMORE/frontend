@@ -1,0 +1,128 @@
+/* ========== Aside NAVBAR ==========*/
+:root {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    --text-primary: #ffffff;
+    --text-secondary: #ececec;
+    --bg-primary: #00c3ea;
+    --bg-secondary: #cf9ee2;
+    --transition-speed: 600ms;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #00c3ea;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-speed);
+    width: auto;
+    min-width: 2rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.link-text {
+    margin-left: 1rem;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+}
+
+/* ========== Small Screen ==========*/
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        bottom: 0;
+        height: 4.2rem;
+        width: 100vw;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        height: 4.2rem;
+        justify-content: center;
+    }
+
+    .link-text {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+/* ========== Big Screen ==========*/
+@media only screen and (min-width: 1000px) {
+    .navbar {
+        height: 75vh;
+        width: 4rem;
+    }
+
+    .navbar:hover {
+        width: 10rem;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+        opacity: 1;
+        transition: all .3s ease-in;
+    }
+}
+
+/* ========== Aside END NAVBAR ==========*/
