@@ -417,7 +417,7 @@ body {
 }
 
 
-.search-button {
+#search-button {
   position: absolute;
   font-family: calibri;
   background-color: #00c3ea;
@@ -429,11 +429,11 @@ body {
   margin: none;
 }
 
-.search-button:hover {
+#search-button:hover {
   background-color: #cf9ee2;
 }
 
-.search:active {
+#search:active {
   background-color: #cf9ee2;
   transform: translateX(1px);
 }
