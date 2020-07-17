@@ -379,15 +379,15 @@ body {
   grid-template-columns: 15% 23% 23% 23% auto;
   grid-template-rows: 10% 7% 25% 25% 25% auto;
   grid-gap: .5vw;
-  grid-template-areas:    
+  grid-template-areas:
     "header header header header header"
     "subheader subheader subheader subheader subheader"
     "sidea sect1 sect2 sect3 beside"
     "sidea sect4 sect5 sect6 beside"
     "sidea sect7 sect8 sect9 beside"
-    "footer footer footer footer footer";  
+    "footer footer footer footer footer";
 }
- 
+
 /* ========== START GRID ==========*/
 
 header {
@@ -403,13 +403,13 @@ header {
 
 #sidea {
   grid-area: sidea;
-  background-color: #b6f2ff;
+  /* background-color: #b6f2ff; */
 }
 
 #beside {
   grid-area: beside;
   background-color: #ffffff;
-  
+
 }
 
 #first {
@@ -538,7 +538,7 @@ footer {
   position: relative;
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
   justify-items: center;
   margin-top: 0;
   margin-bottom: 4%;
@@ -550,7 +550,7 @@ footer {
 .card {
   /* position: absolute; */
   width: 40%;
-  height: 100%; 
+  height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
   background-color: white;
@@ -696,4 +696,3 @@ footer {
 }
 
 /* ========== END CARD ==========*/
-
