@@ -1,0 +1,123 @@
+/* ========== Aside NAVBAR ==========*/
+:root {
+    /* font-size: 14px; */
+    font-family: 'Open Sans';
+    --text-primary: #ffffff;
+    --text-secondary: #ececec;
+    --bg-primary: #00c3ea;
+    --bg-secondary: #cf9ee2;
+    --transition-speed: 600ms;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #00c3ea;
+}
+
+#sidea {
+    height: 100%;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-speed);
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.link-text {
+    margin-left: 10%;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+}
+
+/* ========== Small Screen ==========*/
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 10% 7% 24% 24% 24% auto;
+        grid-gap: .5vw;
+        grid-template-areas:
+            "header header header"
+            "subheader subheader subheader"
+            "sect1 sect2 sect3"
+            "sect4 sect5 sect6"
+            "sect7 sect8 sect9"
+            "sidea sidea sidea";
+    }
+
+    #sidea {
+        height: 8%;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        height: 4.2rem;
+        justify-content: center;
+    }
+
+    .link-text {
+        display: none;
+    }
+}
+
+/* ========== Big Screen ==========*/
+@media only screen and (min-width: 1000px) {
+    #sidea {
+        height: 75vh;
+        width: 4rem;
+    }
+
+    #sidea:hover {
+        width: 10rem;
+    }
+
+    #sidea:hover .link-text {
+        display: block;
+        opacity: 1;
+        transition: all .3s ease-in;
+    }
+}
+
+/* ========== Aside END NAVBAR ==========*/
