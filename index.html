@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae68cb6f36.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="../style/engage.css">
-    <title>Willow | Engage</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Willow | Home</title>
 
 </head>
 <body>
@@ -22,31 +22,31 @@
     <nav class="navbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a href="../views/search.html" class="nav-link">
+            <a href="../frontend/views/search.html" class="nav-link">
                 <i class="fas fa-search fa-2x"></i>
                 <span class="link-text">SEARCH</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="../views/practice.html" class="nav-link">
+            <a href="./index.html" class="nav-link">
                 <i class="fas fa-atlas fa-2x"></i>
-                <span class="link-text">PRACTICE</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="../index.html" class="nav-link">
-                <i class="fas fa-user-astronaut fa-2x"></i>
                 <span class="link-text">EXPLORE</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="../views/engage.html" class="nav-link">
+            <a href="../frontend/views/practice.html" class="nav-link">
+                <i class="fas fa-user-astronaut fa-2x"></i>
+                <span class="link-text">PRACTICE</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="../frontend/views/engage.html" class="nav-link">
                 <i class="fas fa-envelope-open-text fa-2x"></i>
                 <span class="link-text">ENGAGE</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="../index.html" class="nav-link">
+            <a href="./index.html" class="nav-link">
                 <i class="fas fa-clone fa-2x"></i>
                 <span class="link-text">CARD+</span>
             </a>
@@ -57,30 +57,23 @@
 
   <section class="main">
 
-    <div class="customContainer">
-      <div class="customCard">
-          <form action="#0">
+    <div class="card">
 
-              <div class="customWord">
-                  <div class="customItem">
-                      <label>Contact Us</label>
-                      <a href="../index.html" class="custom-close">
-                          <i class="fas fa-window-close fa-2x"></i>
-                      </a>
-                  </div>
-                  <input type="word" id="custom_word" name="custom_word" required placeholder="yourmail@you.com">
-              </div>
-
-              <div class="customDefinition">
-                  <textarea type="definition" id="custom_definition" name="custom_definition" required
-                      placeholder="Thank you for sharing your feedback! - Willow Team"></textarea>
-              </div>
-
-              <input type="submit" id="custom_button" value="Submit">
-
-          </form>
+      <div class="thefront">            
+        <img src="../frontend/style/images/arrow.svg" alt="Flip" class="arrow-over">
+        <p class="definition">"Choose a job you love, and you will never have to work a day in your life.”</p>
+        <img src="../frontend/style/images/heart.svg" alt="Favorite" class="heart">
+        <img src="../frontend/style/images/arrow.svg" alt="Flip" class="arrow-under">
       </div>
-  </div>
+
+      <div class="theback">
+        <img src="../frontend/style/images/arrow.svg" alt="Flip" class="arrow-over">
+        <p class="word">Confucius says...</p>
+        <img src="../frontend/style/images/heart.svg" alt="Favorite" class="heart">
+        <img src="../frontend/style/images/arrow.svg" alt="Flip" class="arrow-under">
+      </div>
+
+    </div>
 
   </section>
 

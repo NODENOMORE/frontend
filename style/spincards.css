@@ -2,21 +2,23 @@
 
 body, html {
   height: 100vh;
-  background-color: #f2f2f2;
 }
 
 body {
   margin: 0;
   display: grid;
-  grid-template-columns: 15% 70% auto;
-  grid-template-rows: 10% 7% 75% auto;
-  grid-template-areas:    
-    "header header header"
-    "subheader subheader subheader"
-    "sidea main beside"
-    "footer footer footer";
+  grid-template-columns: 15% 23% 23% 23% auto;
+  grid-template-rows: 10% 7% 25% 25% 25% auto;
+  grid-gap: .5vw;
+  grid-template-areas:
+    "header header header header header"
+    "subheader subheader subheader subheader subheader"
+    "sidea sect1 sect2 sect3 beside"
+    "sidea sect4 sect5 sect6 beside"
+    "sidea sect7 sect8 sect9 beside"
+    "footer footer footer footer footer";
 }
- 
+
 /* ========== START GRID ==========*/
 
 header {
@@ -25,54 +27,90 @@ header {
 }
 
 #subheader {
+  position: relative;
   grid-area: subheader;
   background-color: #f2f2f2;
 }
 
 #sidea {
   grid-area: sidea;
-  background-color: #f2f2f2
-}
-
-.main {
-  width: 100%;
-  border-radius: 15px 15px 15px 15px;
-  grid-template-columns: auto auto auto;
-  justify-content: space-evenly; 
-  text-align: center;
-
 }
 
 #beside {
   grid-area: beside;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 
+}
+
+#first {
+  grid-area: sect1;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: red;
+}
+
+#second {
+  grid-area: sect2;
+  background-color: #ffffff;
+}
+
+#third {
+  grid-area: sect3;
+  background-color: #ffffff;
+}
+
+#fourth {
+  grid-area: sect4;
+  background-color: #ffffff;
+}
+
+#fifth {
+  grid-area: sect5;
+  background-color: #ffffff;
+}
+
+#sixth {
+  grid-area: sect6;
+  background-color: #ffffff;
+}
+
+#seventh {
+  grid-area: sect7;
+  background-color: #ffffff;
+}
+
+#eigth {
+  grid-area: sect8;
+  background-color: #ffffff;
+}
+
+#ninth {
+  grid-area: sect9;
+  background-color: #ffffff;
 }
 
 footer {
   grid-area: footer;
-  margin-top: 4vh;
-  background-color: white;
+  background-color: #f2f2f2;
 }
 
 /* ========== END GRID ==========*/
 
 /* ========== NAVBAR ==========*/
 
-header {
-  display:grid;
-  align-items: center;
-}
-
 .logo {
-  display: grid;
+  position: absolute;
+  left: 2vh;
+  top: 1vh;
   background-color: white;
   font-family:'Yellowtail', cursive;
   font-size: 8vh;
   color: #00c3ea;
+
 }
 
 /* ========== END NAVBAR ==========*/
+
 
 /* ========== SEARCH BAR ==========*/
 
@@ -85,6 +123,7 @@ header {
   margin-left: 25vw;
   margin-right: 25vw;
   margin-top: 2vh;
+
 }
 
 .searchbar input {
@@ -111,6 +150,7 @@ header {
   z-index: 1;
 }
 
+
 .search-button:hover {
   background-color: #cf9ee2;
 }
@@ -122,71 +162,39 @@ header {
 
 /* ========== END SEARCHBAR ==========*/
 
-
-.slider {
-  /* position: relative; 
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw; */
-}
-
-.slide {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out; */
-}
-/* 
-.content {
-  display: grid; 
-  text-align: center;
-  place-items: center;
-  height: 100%;
-}
-
-.slide.current {
-  opacity: 1;
-}
-
-.slide .content {
-  position: abolute;
-  bottom: 70px;
-  left: 0px;
-  width: 600px;
-  background-color: #222;
-} */
-
-
-/* .slide:first-child {
-  background: url('./fields.jpg ') no-repeat center center/cover;
-  max-width: 70%;
-  max-height: 75%;
-} */
-
 /* ========== START CARD ==========*/
 
+.maincontainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin-top: 0;
+  margin-bottom: 4%;
+  margin-left: 1%;
+  height: 100%;
 
+}
 
 .card {
-  display: grid; 
-  position: relative;
+  /* position: absolute; */
+  width: 40%;
   height: 100%;
-  text-align: center;
-  place-items: center;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
-  font-size: 1.7vw;
+  background-color: white;
+  color: #00c3ea;
+  /* font-size: 1.7vw; */
   text-align: center;
   justify-items: center;
   font-family: calibri;
   line-height: 1.6;
   font-weight: bold;
   border-radius: 15px 15px 15px 15px;
-  min-width: 40vw;
+  min-width: 22vw;
 }
+
 
 .card:hover {
   transform: rotateY(180deg);
@@ -198,10 +206,9 @@ header {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px 15px 15px 15px;
-  background: white;
+  background: #f2f2f2;
   color: #00c3ea;
-  font-size: 4vw;
-  overflow: auto;
+  font-size: 1.2vw;
 }
 
 .theback {
@@ -210,23 +217,24 @@ header {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px 15px 15px 15px;
-  background: white;
+  background: #f2f2f2;
   color: #00c3ea;
   transform: rotateY(180deg);
-  font-size: 5vw;
-  overflow: auto;
+  font-size: 2vw;
 }
 
 .definition {
-  display: grid;
-  height: 100%;
-  place-items: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .word {
-  display: grid;
-  height: 100%;
-  place-items: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .heart {
@@ -260,10 +268,20 @@ header {
 
 .yep-left {
   margin: auto;
+  /* margin-right: 20vw; */
+  /* margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 25%; */
+
 }
 
 .yep-right {
   margin: auto;
+  /* margin-left: 20vw; */
+  /* margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 30vw; */
+
 }
 
 .chevron-left {
