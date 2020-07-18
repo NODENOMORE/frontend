@@ -7,10 +7,10 @@ $( document ).ready(function() {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:9000/mywords",
+      "url": "https://fathomless-brushlands-12746.herokuapp.com/mywords",
       "method": "GET",
     }
-    
+
     $.ajax(settings).then(function (response) {
 
       console.log(response);
@@ -24,7 +24,7 @@ $( document ).ready(function() {
       // // Looping through each result item
 
       for (var i = 0; i <= response._word.length; i++) {
-        
+
         console.log(i)
         var category = response._word[i].category;
         $("#category"+[i]).html(category);
@@ -32,7 +32,7 @@ $( document ).ready(function() {
       }
 
     });
-    
+
   });
 
 });
