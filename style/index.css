@@ -37,15 +37,12 @@ header {
 }
 
 .main {
-  /* height: 100%; */
-  padding: 5vh;
-  height: auto;
+  width: 100%;
   border-radius: 15px 15px 15px 15px;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly; 
   text-align: center;
-  background-color: white;
-  overflow: auto;
+
 }
 
 #beside {
@@ -207,112 +204,206 @@ body {
 
 /* ========== Aside END NAVBAR ==========*/
 
-/* ========== FORM START ==========*/
+/* ========== CARD SLIDE START ==========*/
+.slider {
+  /* position: relative; 
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw; */
+}
 
-/* Form Container */
-.customCard {
-  padding: auto;
-  /* margin: 1vh; */
+.slide {
+  /* position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: var(--color-first);
-  border-radius: .4rem;
-}
-
-/* Form Titles */
-label {
-  font-family: 'Yellowtail', cursive;
-  font-size: 4rem;
-  color: var(--color-second);
-}
-
-::placeholder {
-  color: var(--color-first);
-  opacity: 1;
-  /* Firefox */
-  transition: opacity 0.3s linear;
-}
-
-:focus::placeholder {
+  height: 100%;
   opacity: 0;
+  transition: opacity 0.4s ease-in-out; */
+}
+/* 
+.content {
+  display: grid; 
+  text-align: center;
+  place-items: center;
+  height: 100%;
 }
 
-/* Form Word Box */
-form input[type="word"] {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 1.5rem;
-  background: var(--color-second);
-  color: var(--color-first);
-  border: 0;
-  padding: 1rem;
-  font-size: 2rem;
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: abolute;
+  bottom: 70px;
+  left: 0px;
+  width: 600px;
+  background-color: #222;
+} */
+
+
+/* .slide:first-child {
+  background: url('./fields.jpg ') no-repeat center center/cover;
+  max-width: 70%;
+  max-height: 75%;
+} */
+
+/* ========== CARD SLIDE END ==========*/
+
+/* ========== START CARD ==========*/
+
+
+.card {
+  display: grid; 
+  position: relative;
+  height: 100%;
+  text-align: center;
+  place-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  font-size: 1.7vw;
+  text-align: center;
+  justify-items: center;
   font-family: calibri;
-  border-radius: .4rem;
-  background-color:#f1f1f1;
+  line-height: 1.6;
+  font-weight: bold;
+  border-radius: 15px 15px 15px 15px;
+  min-width: 40vw;
 }
 
-/* Form Definition Box */
-form textarea[type="definition"] {
-  display: block;
-  resize: none;
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
   width: 100%;
-  height: 40vh;
-  box-sizing: border-box;
-  margin-top: 1.5rem;
-  background: var(--color-second);
-  color: var(--color-first);
-  border: 0;
-  padding: 1rem;
-  font-size: 2rem;
-  font-family: calibri;
-  border-radius: .4rem;
-  background-color:#f1f1f1;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px 15px 15px 15px;
+  background: white;
+  color: #00c3ea;
+  font-size: 4vw;
+  overflow: auto;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--color-third);
-}
-
-/* Form Confirm Button */
-form input[type="submit"] {
-  margin-top: 2vh;
+.theback {
+  position: absolute;
   width: 100%;
-  background: #f1f1f1;
-  color: var(--color-first);
-  border: 0;
-  padding: 1rem;
-  font-size: 2rem;
-  border-radius: .4rem;
-  transition: 0.3s;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px 15px 15px 15px;
+  background: white;
+  color: #00c3ea;
+  transform: rotateY(180deg);
+  font-size: 5vw;
+  overflow: auto;
 }
 
-#customDefinition {
-  margin-top: 2vh;
+.definition {
+  display: grid;
+  height: 100%;
+  place-items: center;
 }
 
-#custom_button:hover {
-  background-color: var(--color-third);
-  color: var(--color-second);
+.word {
+  display: grid;
+  height: 100%;
+  place-items: center;
 }
 
-.custom-close {
+.heart {
+  position: absolute;
+  width: 3vh;
+  filter: invert(.3);
+  top: 3vh;
+  right: 2vw;
+}
+
+.heart:hover {
+  filter: invert(0);
+  transition: 200ms ease-in-out;
+  }
+
+.arrow-over {
+  width: 4vh;
+  position: absolute;
+  transform: rotate(-20deg);
+  top: 3vh;
+  left: 2vw;
+}
+
+.arrow-under {
+  width: 4vh;
+  position: absolute;
+  transform: rotate(160deg);
+  bottom: 2vh;
+  right: 2vw;
+}
+
+.yep-left {
+  margin: auto;
+}
+
+.yep-right {
+  margin: auto;
+}
+
+.chevron-left {
+  transition: opacity 500ms ease-out;
+}
+
+.chevron-left:hover {
+  opacity: 50%;
+}
+
+.chevron-right {
   float: right;
-  color: black;
-  transition: 0.3s;
+  transform: rotate(180deg);
+  transition: opacity 500ms ease-out;
 }
 
-.custom-close:hover {
-  color: var(--color-third);
+.chevron-right:hover {
+  opacity: 50%;
 }
+
+@media all and (max-width: 1500px) {
+  .chevron-right {
+    width: 75%
+  }
+
+  .chevron-left {
+    width: 75%;
+
+  }
+
+}
+
+@media all and (max-width: 1000px) {
+  .chevron-right {
+    width: 40%
+  }
+
+  .chevron-left {
+    width: 40%
+  }
+
+}
+
+/* ========== END CARD ==========*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+/* ========== GLOBAL ==========*/
+
+body, html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 15% 69% auto;
+  grid-template-rows: 10% 7% 75% auto;
+  grid-template-areas:    
+    "header header header"
+    "subheader subheader subheader"
+    "sidea main beside"
+    "footer footer footer";
+}
+ 
+/* ========== START GRID ==========*/
+
+header {
+  grid-area: header;
+  background-color: #ffffff;
+}
+
+#subheader {
+  grid-area: subheader;
+  background-color: #f2f2f2;
+}
+
+#sidea {
+  grid-area: sidea;
+  background-color: #ffffff;
+}
+
+#main {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
+  margin: 10px;
+}
+
+.cardz {
+  /* border: 1px solid black; */
+  padding: 20px;
+  margin-top: 5px;
+  background-color:#f2f2f2;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 10px 10px #888888 ;
+}
+
+#beside {
+  grid-area: beside;
+  background-color: #ffffff;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f2f2f2;
+}
+
+/* ========== END GRID ==========*/
+
+/* ========== NAVBAR ==========*/
+
+header {
+  display:grid;
+  align-items: center;
+}
+
+.logo {
+  display: grid;
+  background-color: white;
+  font-family:'Yellowtail', cursive;
+  font-size: 8vh;
+  color: #00c3ea;
+}
+
+/* ========== END NAVBAR ==========*/
+
+.practice {
+  display: grid; 
+  text-align: center;
+  place-items: center;
+  height: 100%;
+  font-size: 2vh;
+  color: #00c3ea;
+  font-family: calibri;
+}
